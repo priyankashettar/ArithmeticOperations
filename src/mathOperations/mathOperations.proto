@@ -1,0 +1,30 @@
+syntax = "proto3";
+option go_package = "./";
+
+package mathOperations;
+
+// Format of the input Message used for gRPC Server
+message Input {
+    double x = 1;
+    double y = 2;
+}
+
+// Format of the Output Message used for gRPC Server
+message Output {
+    double output = 1;
+    Error error = 2;
+}
+
+// Format of the Error Message used for gRPC Server
+message Error {
+    string errorCode = 1;
+    string errorMessage = 2;
+}
+
+// Services provided by the gRPC Server and Client
+service MathOperations {
+    rpc Add(Input) returns (Output) {}
+    rpc Subtract(Input) returns (Output) {}
+    rpc Multiply(Input) returns (Output) {}
+    rpc Division(Input) returns (Output) {}
+}
