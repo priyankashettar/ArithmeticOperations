@@ -1,4 +1,4 @@
-# Lovoo
+# Basic Arithmetic Operater
 This is a gRPC command line application which enables the user to do the basic Math Operations.
 The application has a gRPC Server and a client.
 The gRPC Server supports the basic Math Operations of two variables. It presently supports
